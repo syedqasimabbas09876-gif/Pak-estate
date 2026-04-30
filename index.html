@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pak Estate - Luxury Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root {
+--primary-color: #724053;
+--accent-color: #D69FAB;
+--bg-light: #fdf8f9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background-color: var(--bg-light); padding-bottom: 120px; }
+
+.header {
+background: #ffffff;
+padding: 15px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 2px 15px rgba(114, 64, 83, 0.08);
+}
+
+.main-logo { height: 60px; width: auto; object-fit: contain; }
+
+.hero {
+background: linear-gradient(rgba(114, 64, 83, 0.75), rgba(114, 64, 83, 0.75)), url('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover;
+height: 50vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+padding: 0 20px;
+}
+
+.hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 10px; }
+
+.section-title { text-align: center; padding: 40px 20px 5px; font-size: 1.8rem; color: var(--primary-color); font-weight: 700; }
+
+.container { padding: 0 15px; max-width: 1000px; margin: auto; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+
+.card {
+background: white; border-radius: 15px; overflow: hidden;
+box-shadow: 0 10px 25px rgba(114, 64, 83, 0.08); border: 1px solid rgba(214, 159, 171, 0.2);
+}
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.card-content { padding: 20px; }
+.price { color: var(--primary-color); font-size: 1.5rem; font-weight: 700; }
+
+.site-footer {
+background-color: var(--primary-color);
+color: white;
+margin-top: 60px;
+padding: 50px 20px 100px;
+border-top-left-radius: 30px;
+border-top-right-radius: 30px;
+text-align: center;
+}
+
+/* Secure Watermark */
+.watermark { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 20px; font-style: italic; }
+
+.floating-bar {
+position: fixed; bottom: 20px; left: 5%; width: 90%;
+background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+box-shadow: 0 15px 35px rgba(114, 64, 83, 0.15);
+display: flex; justify-content: space-around; align-items: center;
+padding: 12px 0; z-index: 1000; border-radius: 50px;
+border: 1px solid rgba(214, 159, 171, 0.4);
+}
+
+.nav-item { text-align: center; color: var(--primary-color); text-decoration: none; font-size: 0.8rem; flex: 1; display: flex; flex-direction: column; align-items: center; font-weight: 600; }
+.nav-item i { font-size: 1.3rem; margin-bottom: 4px; }
+
+.wa-btn { position: relative; top: -20px; }
+.wa-btn .icon-bg {
+background: #25D366; color: white; width: 55px; height: 55px; border-radius: 50%;
+display: flex; justify-content: center; align-items: center; margin-bottom: 5px;
+box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); border: 4px solid white;
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+<div class="logo-container">
+<img src="https://dummyimage.com/400x150/ffffff/724053.png&text=THE+PAK+ESTATE" alt="Logo" class="main-logo">
+</div>
+</header>
+
+<section class="hero">
+<h1>Your Dream Home Awaits</h1>
+<p>Premium Living in Safari Garden & Bahria Nasheman</p>
+</section>
+
+<h2 class="section-title">Luxury Listings</h2>
+
+<div class="container card-grid">
+<div class="card">
+<img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800" alt="House">
+<div class="card-content">
+<div class="price">Rs. 1.2 Crore</div>
+<p>Premium Villa in Safari Garden</p>
+</div>
+</div>
+</div>
+
+<footer class="site-footer">
+<h3>Let's Secure Your Dream</h3>
+<p>Expert Real Estate Consulting</p>
+<div class="watermark">Concept Demo & Tech Managed by Qasim</div>
+</footer>
+
+<div class="floating-bar">
+<a href="tel:YOUR_NUMBER_HERE" class="nav-item">
+<i class="fas fa-phone"></i>
+<span>Call Us</span>
+</a>
+
+<a href="https://wa.me/923299718034" class="nav-item wa-btn" target="_blank">
+<div class="icon-bg"><i class="fab fa-whatsapp"></i></div>
+<span style="color: #25D366;">WhatsApp</span>
+</a>
+
+<a href="mailto:property@pakestate.com" class="nav-item">
+<i class="fas fa-envelope"></i>
+<span>Email</span>
+</a>
+</div>
+
+</body>
+</html>
