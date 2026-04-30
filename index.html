@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pak Estate - Luxury Real Estate</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root {
+--primary-color: #B07D4B; /* Rich Caramel Gold */
+--accent-color: #D4A373; /* Soft Caramel */
+--text-dark: #3E3124; /* Deep Espresso Brown */
+--text-light: #7E6C5C; /* Warm Muted Brown */
+--bg-light: #FCFAF8; /* Warm Caramel White */
+--footer-bg: #2A1F18; /* Very Dark Warm Brown */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: var(--bg-light); padding-bottom: 90px; color: var(--text-dark); font-family: 'Poppins', sans-serif; }
+
+h1, h2, h3, .logo-text { font-family: 'Playfair Display', serif; }
+
+/* Sleek Luxury Header */
+.header {
+background: #ffffff;
+padding: 15px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 4px 20px rgba(176, 125, 75, 0.08);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.main-logo { height: 55px; width: auto; object-fit: contain; }
+
+.contact-links a {
+color: var(--primary-color);
+font-size: 1.1rem;
+border: 1px solid var(--primary-color);
+padding: 8px 15px;
+border-radius: 30px; /* Elegant pill shape */
+text-decoration: none;
+font-weight: 500;
+transition: all 0.3s ease;
+}
+.contact-links a:hover { background: var(--primary-color); color: white; }
+
+/* Luxury Hero Section */
+.hero {
+/* Warm brownish-caramel overlay */
+background: linear-gradient(rgba(42, 31, 24, 0.6), rgba(42, 31, 24, 0.6)), url('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover;
+height: 50vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+padding: 0 20px;
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 15px; letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.hero p { font-size: 1.1rem; font-weight: 300; opacity: 0.95; letter-spacing: 0.5px; }
+
+/* Section Titles */
+.section-title {
+text-align: center; padding: 50px 20px 5px; font-size: 2rem; color: var(--text-dark);
+}
+.title-underline {
+width: 50px; height: 2px; background-color: var(--primary-color); margin: 10px auto 40px;
+}
+
+/* Property Cards Grid */
+.container { padding: 0 15px; max-width: 1000px; margin: auto; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+
+/* Elegant Cards */
+.card {
+background: white; border-radius: 8px; overflow: hidden;
+box-shadow: 0 10px 30px rgba(176, 125, 75, 0.08); border: 1px solid rgba(176, 125, 75, 0.15);
+transition: transform 0.3s ease;
+}
+.card:hover { transform: translateY(-5px); }
+.card img { width: 100%; height: 220px; object-fit: cover; }
+
+.card-content { padding: 25px; }
+.price { color: var(--primary-color); font-size: 1.6rem; font-weight: 600; margin-bottom: 8px; font-family: 'Playfair Display', serif;}
+.title { font-size: 1.15rem; color: var(--text-dark); font-weight: 600; margin-bottom: 10px; }
+.location { color: var(--text-light); font-size: 0.9rem; margin-bottom: 18px; display: flex; align-items: center; }
+.location i { margin-right: 8px; color: var(--accent-color); }
+
+.features { display: flex; justify-content: space-between; border-top: 1px solid rgba(176, 125, 75, 0.2); padding-top: 15px; color: var(--text-light); font-size: 0.85rem; font-weight: 500; }
+.features i { color: var(--primary-color); margin-right: 6px; }
+
+/* Deep Luxury Footer */
+.site-footer {
+background-color: var(--footer-bg);
+color: white;
+margin-top: 70px;
+padding: 60px 20px 40px;
+text-align: center;
+}
+
+.footer-content h3 { font-size: 1.8rem; margin-bottom: 10px; color: var(--primary-color); }
+.footer-content p { color: #dcd4cc; margin-bottom: 30px; font-size: 0.95rem; font-weight: 300; }
+
+.footer-contact {
+background: rgba(255, 255, 255, 0.03);
+padding: 25px;
+border-radius: 8px;
+text-align: left;
+max-width: 400px;
+margin: auto;
+border: 1px solid rgba(176, 125, 75, 0.2);
+}
+
+.contact-row { display: flex; align-items: center; margin-bottom: 15px; font-size: 0.95rem; color: #e8e2dc; }
+.contact-row:last-child { margin-bottom: 0; }
+.contact-row i { color: var(--primary-color); width: 30px; font-size: 1.2rem; }
+
+.watermark { font-size: 0.8rem; color: #7E6C5C; margin-top: 40px; letter-spacing: 0.5px; }
+
+/* Elegant Bottom Nav */
+.bottom-bar {
+position: fixed; bottom: 0; left: 0; width: 100%;
+background: #ffffff;
+box-shadow: 0 -5px 20px rgba(176, 125, 75, 0.08);
+display: flex; justify-content: space-around; align-items: center;
+padding: 12px 0; z-index: 1000;
+}
+
+.nav-item {
+text-align: center; color: var(--text-light); text-decoration: none; font-size: 0.75rem;
+flex: 1; display: flex; flex-direction: column; align-items: center; font-weight: 500;
+}
+.nav-item i { font-size: 1.3rem; margin-bottom: 5px; color: var(--primary-color); }
+
+/* WhatsApp Button Kept Green for Trust & Clicks */
+.nav-item.wa-btn { color: #25D366; font-weight: 600; }
+.nav-item.wa-btn i { color: #25D366; font-size: 1.8rem; }
+</style>
+</head>
+<body>
+
+<header class="header">
+<div class="logo-container">
+<img src="https://dummyimage.com/400x150/ffffff/B07D4B.png&text=THE+PAK+ESTATE" alt="The Pak Estate" class="main-logo">
+</div>
+<div class="contact-links">
+<a href="tel:YOUR_NUMBER_HERE"><i class="fas fa-phone-alt"></i> Call Us</a>
+</div>
+</header>
+
+<section class="hero">
+<h1>ELEVATE YOUR LIFESTYLE</h1>
+<p>Premium Real Estate Investments in Lahore</p>
+</section>
+
+<h2 class="section-title">Exclusive Properties</h2>
+<div class="title-underline"></div>
+
+<div class="container card-grid">
+<div class="card">
+<img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Property">
+<div class="card-content">
+<div class="price">Rs. 1.2 Crore</div>
+<div class="title">Luxury 3-Bed Apartment</div>
+<div class="location"><i class="fas fa-map-marker-alt"></i> Safari Garden, Lahore</div>
+<div class="features">
+<span><i class="fas fa-bed"></i> 3 Beds</span>
+<span><i class="fas fa-bath"></i> 3 Baths</span>
+<span><i class="fas fa-vector-square"></i> 10 Marla</span>
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Property">
+<div class="card-content">
+<div class="price">Rs. 2.5 Crore</div>
+<div class="title">5 Marla Independent Villa</div>
+<div class="location"><i class="fas fa-map-marker-alt"></i> Bahria Nasheman, Lahore</div>
+<div class="features">
+<span><i class="fas fa-bed"></i> 4 Beds</span>
+<span><i class="fas fa-bath"></i> 4 Baths</span>
+<span><i class="fas fa-car"></i> Garage</span>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="site-footer">
+<div class="footer-content">
+<h3>The Pak Estate</h3>
+<p>Authorized Dealers: Safari Garden & Bahria Nasheman</p>
+
+<div class="footer-contact">
+<div class="contact-row">
+<i class="fas fa-map-marker-alt"></i>
+<span>32-A Haider Rd, Sant Nagar Islampura, Lahore</span>
+</div>
+<div class="contact-row">
+<i class="fab fa-whatsapp"></i>
+<span>WhatsApp: +92 335 4748787</span>
+</div>
+<div class="contact-row">
+<i class="fas fa-envelope"></i>
+<span>Email: property@pakestate.com</span>
+</div>
+</div>
+<div class="watermark">Digital Presence Managed by Qasim | 2026</div>
+</div>
+</footer>
+
+<div class="bottom-bar">
+<a href="tel:YOUR_NUMBER_HERE" class="nav-item">
+<i class="fas fa-phone"></i>
+<span>Call</span>
+</a>
+<a href="https://wa.me/YOUR_NUMBER_HERE" class="nav-item wa-btn" target="_blank">
+<i class="fab fa-whatsapp"></i>
+<span>WhatsApp</span>
+</a>
+<a href="mailto:property@pakestate.com" class="nav-item">
+<i class="fas fa-envelope"></i>
+<span>Email</span>
+</a>
+</div>
+
+</body>
+</html>
